@@ -28,11 +28,17 @@ for ds in dataSets:
 
     #Reading the training data in a csv file using pandas
     # --> add your Python code here
-    dbTraining =
-
+    dbTraining = pd.read_csv(ds)
+    print(dbTraining)
     #Transform the original categorical training features to numbers and add to the 4D array X.
     #For instance Young = 1, Prepresbyopic = 2, Presbyopic = 3, X = [[1, 1, 1, 1], [2, 2, 2, 2], ...]]
     #--> add your Python code here
+    categorized_features = {
+            'Young': 1, 'Prepresbyopic': 2, 'Presbyopic': 3, #Age
+            'Myope': 1, 'Hypermetrope': 2, #Spectacle Prescription
+            'No': 1, 'Yes': 2, #Astigmatism
+            'Normal': 1, 'Reduced': 2 #Tear Production Rate
+    }
 
     #Transform the original categorical training classes to numbers and add to the vector Y.
     #For instance Yes = 1 and No = 2, Y = [1, 1, 2, 2, ...]
@@ -43,19 +49,22 @@ for ds in dataSets:
 
        # fitting the decision tree to the data using entropy as your impurity measure and maximum depth = 5
        # --> addd your Python code here
-       # clf =
+       # clf = pass
 
        #Read the test data and add this data to dbTest
        #--> add your Python code here
+       pass
 
        for data in dbTest:
            #Transform the features of the test instances to numbers following the same strategy done during training,
            #and then use the decision tree to make the class prediction. For instance: class_predicted = clf.predict([[3, 1, 2, 1]])[0]
            #where [0] is used to get an integer as the predicted class label so that you can compare it with the true label
            #--> add your Python code here
+           pass
 
            #Compare the prediction with the true label (located at data[4]) of the test instance to start calculating the accuracy.
            #--> add your Python code here
+           pass
 
     #Find the average of this model during the 10 runs (training and test set)
     #--> add your Python code here
@@ -63,7 +72,4 @@ for ds in dataSets:
     #Print the average accuracy of this model during the 10 runs (training and test set).
     #Your output should be something like that: final accuracy when training on contact_lens_training_1.csv: 0.2
     #--> add your Python code here
-
-
-
-
+    
